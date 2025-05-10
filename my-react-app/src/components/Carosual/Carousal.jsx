@@ -4,10 +4,16 @@ import 'bootstrap/dist/css/bootstrap.css';
 import image from "../../assets/images/fish.jpg";
 import boatimage from "../../assets/images/smallboat.jpg";
 import towerimage from "../../assets/images/tower_fish.jpg";
+import './Carousal.css';
 export default function Carousal() {
   return (
     <div style={{ height:"100px", width: '100%' }}>
-      <div id="carouselExampleAutoplaying" className="carousel slide" style={{ height: '500px' }} data-bs-ride="carousel">
+      <div id="carouselExampleFade" className="carousel slide carousel-fade" style={{ height: '500px' }} data-bs-ride="carousel">
+        <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src={image} className="d-block w-100"  alt="..." />
@@ -19,11 +25,11 @@ export default function Carousal() {
             <img src={towerimage} className="d-block w-100" alt="..." />
           </div>
         </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
           <span className="carousel-control-prev-icon" aria-hidden="true"></span>
           <span className="visually-hidden">Previous</span>
         </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
           <span className="carousel-control-next-icon" aria-hidden="true"></span>
           <span className="visually-hidden">Next</span>
         </button>

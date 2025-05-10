@@ -1,6 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
-import image from 'src/assets/photorealistic-wild-tuna-day-celebration_23-2151307884.avif';
+import image from "../../assets/images/fish.jpg";
 
 export default function Carousal() {
   return (

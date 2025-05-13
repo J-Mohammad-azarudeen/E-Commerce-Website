@@ -4,13 +4,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 import image from "../../assets/images/fish.jpg";
 import boatimage from "../../assets/images/smallboat.jpg";
 import towerimage from "../../assets/images/tower_fish.jpg";
+import "./Carousal.css";
 export default function Carousal() {
   return (
     <div style={{ height:"100px", width: '100%' }}>
       <div id="carouselExampleAutoplaying" className="carousel slide" style={{ height: '500px' }} data-bs-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={image} className="d-block w-100"  alt="..." />
+            <img src={image} className="d-block w-90"  alt="..." />
           </div>
           <div className="carousel-item">
             <img src={boatimage} className="d-block w-100" alt="..." />

@@ -1,5 +1,7 @@
-.d-block{
+.d-block {
     height: 500px;
+    width: 1500px; /* This is the width */
     background-size: cover;
     background-position: center;
+    object-fit: cover;
 }

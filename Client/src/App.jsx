@@ -1,26 +1,32 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Carousal from './components/Carosual/Carousal'
 import Navbar from './components/Navbar/Navbar'
-import ProductCard from './components/Productcard/Productcard.jsx'
+import Home from './components/Pages/Home'
+import Products from './components/Pages/Products'
+import Login from './components/Pages/Login'
+import SignUp from './components/Pages/SignUp'
+import Cart from './components/Pages/Cart'
+import WishList from './components/Pages/WishList'
 
 function App() {
   const [count, setCount] = useState(0)
-  const sampleProduct = {
-name: 'Wireless Headphones',
-price: 59.99,
-imageUrl: 'https://via.placeholder.com/300x200?text=Product+Image',
-};
 
   return (
-  <div>
-    <Navbar />
-    <Carousal />
-   
-   
-  </div>
+    <div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route exact path='/' Component={Home} />
+          <Route exact path='/products' Component={Products} />
+          <Route exact path='/login' Component={Login} />
+          <Route exact path='/signup' Component={SignUp} />
+          <Route exact path='/cart' Component={Cart} />
+          <Route exact path='/wishlist' Component={WishList} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
 

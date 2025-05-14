@@ -9,9 +9,10 @@ import Login from './components/Pages/Login'
 import SignUp from './components/Pages/SignUp'
 import Cart from './components/Pages/Cart'
 import WishList from './components/Pages/WishList'
+import Productcard from './components/Productcard/Productcard.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div>
@@ -26,6 +27,7 @@ function App() {
           <Route exact path='/wishlist' Component={WishList} />
         </Routes>
       </BrowserRouter>
+      <Productcard />
     </div>
   )
 }

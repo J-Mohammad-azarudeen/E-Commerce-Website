@@ -1,0 +1,7 @@
+.best-seller{
+  transition: transform 0.3s ease-in-out;
+}
+
+.best-seller:hover {
+  transform: translateY(-10px);
+}

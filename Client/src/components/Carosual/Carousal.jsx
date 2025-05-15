@@ -7,9 +7,9 @@ import towerimage from "../../assets/images/tower_fish.jpg";
 import "./Carousal.css";
 export default function Carousal() {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid ">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active bottom-50" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>

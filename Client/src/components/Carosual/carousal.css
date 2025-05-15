@@ -5,3 +5,7 @@
     background-position: center;
     object-fit: cover;
 }
+.carousel-indicators{
+    position: absolute;
+    top: 550px;
+}

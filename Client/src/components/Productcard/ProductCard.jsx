@@ -2,6 +2,7 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import './Productcard.css';
 import {
   MDBContainer,
   MDBRow,
@@ -22,21 +23,22 @@ export default function Productcard() {
       </h4>
 
       <MDBRow>
-        <MDBCol md="12" lg="2" className="mb-4">
+        <MDBCol md="12" lg="2" className="mb-4 best-seller">
           <MDBCard style={{ height: "350px",width: "300px" }}>
             <MDBRipple
               rippleColor="light"
               rippleTag="div"
-              className="bg-image rounded hover-zoom"
+              className="bg-image rounded hover-zoom "
+            
             >
               <MDBCardImage
                 src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/belt.webp"
                 fluid
-                className="w-100 h-100"
+                className=""
               />
               <a href="#!">
                 <div className="mask">
-                  <div className="d-flex justify-content-start align-items-end h-100">
+                  <div className="d-flex justify-content-start align-items-end ">
                     <h5>
                       <span className="badge bg-primary ms-2">New</span>
                     </h5>
@@ -58,24 +60,27 @@ export default function Productcard() {
                 <p>Category</p>
               </a>
               <h6 className="mb-3">$61.99</h6>
+               <MDBBtn className="mx-2">Add to Cart</MDBBtn>
+               <MDBBtn>Buy now</MDBBtn>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
-        <MDBCol md="6" lg="2" className="mb-4">
-          <MDBCard  style={{ height: "350px",width: "300px" }}>
+        <MDBCol md="12" lg="2" className="mb-4 best-seller">
+          <MDBCard  style={{ height: "350px",width: "300px" }} >
             <MDBRipple
               rippleColor="light"
               rippleTag="div"
-              className="bg-image rounded hover-zoom"
+              className="bg-image rounded  hover-zoom"
+             
             >
               <MDBCardImage
                 src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp"
                 fluid
-                className="w-100"
+                className=""
               />
               <a href="#!">
                 <div className="mask">
-                  <div className="d-flex justify-content-start align-items-end h-80">
+                  <div className="d-flex justify-content-start align-items-end ">
                     <h5>
                       <span className="badge bg-success ms-2">Eco</span>
                     </h5>
@@ -97,10 +102,12 @@ export default function Productcard() {
                 <p>Category</p>
               </a>
               <h6 className="mb-3">$61.99</h6>
+               <MDBBtn className="mx-2">Add to Cart</MDBBtn>
+               <MDBBtn>Buy now</MDBBtn>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
-        <MDBCol md="6" lg="2" className="mb-4">
+        <MDBCol md="12" lg="2" className="mb-4  best-seller">
           <MDBCard  style={{ height: "350px",width: "300px" }}>
             <MDBRipple
               rippleColor="light"
@@ -110,7 +117,7 @@ export default function Productcard() {
               <MDBCardImage
                 src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/shoes%20(3).webp"
                 fluid
-                className="w-100"
+                className=""
               />
               <a href="#!">
                 <div className="mask">
@@ -120,7 +127,7 @@ export default function Productcard() {
                     </h5>
                   </div>
                 </div>
-                <div class="hover-overlay">
+                <div className="hover-overlay">
                   <div
                     className="mask"
                     style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
@@ -139,10 +146,12 @@ export default function Productcard() {
                 <s>$61.99</s>
                 <strong className="ms-2 text-danger">$50.99</strong>
               </h6>
+               <MDBBtn className="mx-2">Add to Cart</MDBBtn>
+               <MDBBtn>Buy now</MDBBtn>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
-        <MDBCol md="12" lg="2" className="mb-4">
+        <MDBCol md="12" lg="2" className="mb-4 best-seller">
           <MDBCard style={{ height: "350px",width: "300px" }}>
             <MDBRipple
               rippleColor="light"
@@ -182,10 +191,12 @@ export default function Productcard() {
                 <s>$61.99</s>
                 <strong className="ms-2 text-danger">$50.99</strong>
               </h6>
+               <MDBBtn className="mx-2">Add to Cart</MDBBtn>
+               <MDBBtn>Buy now</MDBBtn>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
-        <MDBCol md="3" lg="2" className="mb-4">
+        <MDBCol md="3" lg="2" className="mb-4 best-seller">
           <MDBCard style={{ height: "350px",width: "300px" }}>
             <MDBRipple
               rippleColor="light"
@@ -199,7 +210,7 @@ export default function Productcard() {
               />
               <a href="#!">
                 <div className="mask">
-                  <div class="d-flex justify-content-start align-items-end h-100"></div>
+                  <div className="d-flex justify-content-start align-items-end h-100"></div>
                 </div>
                 <div className="hover-overlay">
                   <div
@@ -217,15 +228,17 @@ export default function Productcard() {
                 <p>Category</p>
               </a>
               <h6 className="mb-3">$61.99</h6>
+               <MDBBtn className="mx-2">Add to Cart</MDBBtn>
+               <MDBBtn>Buy now</MDBBtn>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
-        <MDBCol md="6" lg="2" className="mb-4">
+        <MDBCol md="6" lg="2" className="mb-4 best-seller">
           <MDBCard style={{ height: "350px",width: "300px" }}>
             <MDBRipple
               rippleColor="light"
               rippleTag="div"
-              className="bg-image rounded hover-zoom"
+              className="bg-image rounded hover-zoom" 
             >
               <MDBCardImage
                 src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(30).webp"
@@ -261,6 +274,8 @@ export default function Productcard() {
                 <s>$61.99</s>
                 <strong className="ms-2 text-danger">$50.99</strong>
               </h6>
+               <MDBBtn className="mx-2">Add to Cart</MDBBtn>
+               <MDBBtn>Buy now</MDBBtn>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>

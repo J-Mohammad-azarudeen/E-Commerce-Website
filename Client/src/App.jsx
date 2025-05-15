@@ -27,7 +27,7 @@ function App() {
           <Route exact path='/wishlist' Component={WishList} />
         </Routes>
       </BrowserRouter>
-      <Productcard />
+      
     </div>
   )
 }

@@ -10,6 +10,8 @@ import SignUp from './components/Pages/SignUp'
 import Cart from './components/Pages/Cart'
 import WishList from './components/Pages/WishList'
 import Productcard from './components/Productcard/Productcard.jsx'
+import AboutUs from './components/Pages/AboutUs.jsx'
+import ContactUs from './components/Pages/ContactUs.jsx'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,13 +23,15 @@ function App() {
         <Routes>
           <Route exact path='/' Component={Home} />
           <Route exact path='/products' Component={Products} />
+          <Route exact path='/aboutus' Component={AboutUs} />
+          <Route exact path='/contactus' Component={ContactUs} />
           <Route exact path='/login' Component={Login} />
           <Route exact path='/signup' Component={SignUp} />
           <Route exact path='/cart' Component={Cart} />
           <Route exact path='/wishlist' Component={WishList} />
         </Routes>
       </BrowserRouter>
-      
+
     </div>
   )
 }

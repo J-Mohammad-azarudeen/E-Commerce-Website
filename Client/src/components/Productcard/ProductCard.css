@@ -1,7 +1,11 @@
-.best-seller{
-  transition: transform 0.3s ease-in-out;
+.hover:hover{
+  transform: translateY(-5px);
 }
-
-.best-seller:hover {
-  transform: translateY(-10px);
+.hover{
+  transition: transform 0.3s;
+}
+.fontnew{ 
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }

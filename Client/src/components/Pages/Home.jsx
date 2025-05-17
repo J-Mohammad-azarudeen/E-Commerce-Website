@@ -1,12 +1,12 @@
 import React from 'react'
 import Carousal from '../Carosual/Carousal'
-import Productcard from '../Productcard/Productcard'
+import ProductCard from '../Productcard/ProductCard.jsx'
 
 const Home = () => {
     return (
         <div>
             <Carousal />
-            <Productcard />
+            <ProductCard />
         </div>
     )
 }

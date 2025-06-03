@@ -1,7 +1,30 @@
-import React from 'react'
+import React, {useState}from 'react'
 import { Link } from 'react-router-dom'
 
+const states = [
+  "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
+  "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
+  "Kerala", "Madhya Pradesh", "Manipur", "Meghalaya", "Mizoram", "Nagaland",
+  "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana",
+  "Tripura", "Uttarakhand", "Uttar Pradesh", "West Bengal"
+];
+
+const stateCities = {
+  "Tamil Nadu": ["Chennai", "Coimbatore", "Madurai", "Tiruchirappalli", "Salem", "Erode", "Tirunelveli", "Vellore", "Thanjavur", "Dindigul", "Kanyakumari", "Tiruppur", "Theni", "Karur", "Sivaganga", "Virudhunagar", "Namakkal", "Ramanathapuram", "Nagapattinam", "Pudukkottai", "Thiruvarur", "Tenkasi", "Thoothukudi", "Kanniyakumari", "Ariyalur", "Perambalur", "Krishnagiri", "Dharmapuri", "Nilgiris"],
+  "Uttarakhand": ["Dehradun", "Haridwar", "Nainital", "Rudrapur", "Roorkee", "Haldwani", "Kashipur", "Pithoragarh", "Mussoorie", "Rishikesh"],
+  "Sikkim": ["Gangtok", "Namchi", "Mangan", "Gyalshing", "Jorethang"],
+  "Rajasthan": ["Jaipur", "Jodhpur", "Udaipur", "Ajmer", "Bikaner"],
+  "Telangana": ["Hyderabad", "Warangal", "Nizamabad", "Karimnagar", "Khammam"],
+  "Andhra Pradesh": ["Visakhapatnam", "Vijayawada", "Guntur", "Nellore", "Tirupati"],
+  "Kerala": ["Thiruvananthapuram", "Kochi", "Kozhikode", "Kollam", "Thrissur"],
+  "Maharashtra": ["Mumbai", "Pune", "Nagpur", "Nashik", "Thane"],
+  "Karnataka": ["Bengaluru", "Mysuru", "Mangaluru", "Hubballi", "Belagavi"],
+  "West Bengal": ["Kolkata", "Howrah", "Durgapur", "Asansol", "Siliguri"],
+  "Uttar Pradesh": ["Lucknow", "Kanpur", "Ghaziabad", "Agra", "Varanasi"],
+};
 const SignUp = () => {
+    const [selectedState, setSelectedState] = useState("");
+  const cities = stateCities[selectedState] || [];
     return (
         <div className="container mt-5">
             <div class="row g-3">
@@ -33,13 +56,29 @@ const SignUp = () => {
     <input type="text" class="form-control" id="inputAddress2" placeholder="Address 2" />
   </div>
   <div class="col-md-6">
-    {/* <label for="inputCity" class="form-label">City</label> */}
-    <input type="text" class="form-control" id="inputCity" placeholder='City' />
+    <select id="inputCity" className="form-select" placeholder="City" disabled={!selectedState}>
+            <option value="">City</option>
+            {cities.map(city => (
+              <option key={city} value={city}>{city}</option>
+            ))}
+          </select>
   </div>
+  
   <div class="col-md-4">
     {/* <label for="inputState" class="form-label">State</label> */}
-    <select id="inputState" class="form-select" placeholder='State'>
-      <option>State</option>
+    <select
+            id="inputState"
+            className="form-select"
+            placeholder="State"
+            value={selectedState}
+            onChange={e => setSelectedState(e.target.value)}
+          >
+            <option value="">State</option>
+            {states.map(state => (
+              <option key={state} value={state}>{state}</option>
+            ))}
+          </select>
+      {/* <option>State</option>
       <option>Andhra Pradesh</option>
       <option>Arunachal Pradesh</option>
       <option>Assam</option>
@@ -66,8 +105,7 @@ const SignUp = () => {
       <option>Tripura</option>
       <option>Uttarakhand</option>
       <option>Uttar Pradesh</option>
-      <option>West Bengal</option>
-    </select>
+      <option>West Bengal</option> */}
   </div>
   <div class="col-md-2">
     {/* <label for="inputZip" class="form-label">Zip</label> */}

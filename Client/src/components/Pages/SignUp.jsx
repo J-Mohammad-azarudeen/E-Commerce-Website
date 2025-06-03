@@ -46,14 +46,19 @@ const SignUp = () => {
     {/* <label for="inputPassword4" class="form-label">Password</label> */}
     <input type="password" class="form-control" id="inputPassword4" placeholder='Your Password' />
   </div>
-  <div class="col-12">
+  
+  <div class="col-6">
     
     {/* <label for="inputAddress" class="form-label">Address</label> */}
     <input type="text" class="form-control" id="inputAddress" placeholder="Address 1" />
   </div>
-  <div class="col-12">
+  <div class="col-6">
     {/* <label for="inputAddress2" class="form-label">Address 2</label> */}
     <input type="text" class="form-control" id="inputAddress2" placeholder="Address 2" />
+  </div>
+  <div class="col-12">
+    {/* <label for="inputPassword4" class="form-label">Password</label> */}
+    <input type="tel" class="form-control" id="inputMobile" placeholder='Your Contact Number' pattern="[0-9]{10}" maxLength={10} />
   </div>
   <div class="col-md-6">
     <select id="inputCity" className="form-select" placeholder="City" disabled={!selectedState}>
@@ -111,14 +116,14 @@ const SignUp = () => {
     {/* <label for="inputZip" class="form-label">Zip</label> */}
     <input type="text" class="form-control" id="inputZip" placeholder='Pincode' />
   </div>
-  <div class="col-12">
+  {/* <div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="gridCheck" />
       <label class="form-check-label" for="gridCheck">
         Check me out
       </label>
     </div>
-  </div>
+  </div> */}
   <div class="col-12 text-center">
     <button type="submit" class="btn btn-primary">Sign in</button>
     <p>Already You have a Account? Click <Link to="/Login">Log in..</Link></p>

@@ -7,8 +7,8 @@ import cards from '../../card.js';
 
 export default function ProductCard() {
   return (
-    <div className="overflow-hidden fontnew" style={{width: "1800px", }}>
-      <h1 className="text-center mt-5 mb-5 " style={{fontSize:"60px"}}>Deals of the Day</h1>
+    <div className="overflow-hidden fontnew" style={{width: "1850px", }}>
+      <h1 className="text-center mt-5 mb-5 ms-5 " style={{fontSize:"60px"}}>Deals of the Day</h1>
     <div className="d-flex flex-wrap justify-content-center align-items-center gap-5" style={{width: "100vw", }}>
       {cards.map((card) => (
         <div

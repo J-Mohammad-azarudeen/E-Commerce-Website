@@ -9,3 +9,7 @@
   font-weight: 400;
   font-style: normal;
 }
+.hover:hover .card-img-top{
+  transform: scale(1.9) translateY(-15px);
+  transition: transform 0.3s;
+}

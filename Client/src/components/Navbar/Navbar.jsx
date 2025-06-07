@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg sticky-top bg-transparent">
+        <nav className="navbar navbar-expand-lg sticky-top bg-transparent " style={{backdropFilter:'blur(15px)', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'}}>
             <div className="container-fluid">
                 <Link className="navbar-brand " to='/'>
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxIRDqzYAy5Hdl3vgp3y6SA-dWUe9tVwJttA&s"

@@ -2,3 +2,6 @@
     background-color: #a5a1a1;
     /* Light gray on hover */
 }
+.topnavbar{
+    backdrop-filter: blur(50px);
+}

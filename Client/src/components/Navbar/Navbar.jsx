@@ -48,9 +48,10 @@ const Navbar = () => {
                             </Link>
                         </li>
                     </ul>
+                    {/*  Search Form  */}
                     <form className="d-flex" role="search">
                         <div className="input-group">
-                            <input type="search" className="form-control w-[300px] " placeholder="Search" aria-label="Search" style={{ width: "350px" }} />
+                            <input type="search" className="form-control w-[300px] " placeholder="Search" aria-label="Search" style={{ width: "200px" }} />
                             <button className="btn btn-outline-primary h-90" type="submit">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="18" fill="currentColor"
                                     className="bi bi-search" viewBox="0 0 16 16">
@@ -60,7 +61,7 @@ const Navbar = () => {
                             </button>
                         </div>
                     </form>
-
+            
                     <ul className="navbar-nav mx-1 mx-lg-5 mb-2 mb-lg-0 gap-3">
                         <li className="nav-item">
                             <Link className="nav-link fs-4 font-monospace fw-semibold text-uppercase rounded-2"
@@ -79,10 +80,12 @@ const Navbar = () => {
 
                         <li className="nav-item dropdown">
                             <button
-                                className="btn btn-outline-secondary nav-link fs-4 font-monospace fw-semibold text-uppercase dropdown-toggle rounded-2"
+                                className="btn nav-link fs-4 font-monospace fw-semibold text-uppercase dropdown-toggle rounded-2"
                                 type="button"
                                 data-bs-toggle="dropdown"
-                                style={{ backgroundColor: '#a5a1a1' }}
+                                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#a5a1a1'}
+                                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                                // style={{ backgroundColor: '#a5a1a1' }}
                             >
                                 <span>Login</span>
                             </button>

@@ -26,18 +26,22 @@ const SignUp = () => {
     const [selectedState, setSelectedState] = useState("");
   const cities = stateCities[selectedState] || [];
     return (
+      
         <div className="container mt-5">
-            <div class="row g-3">
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="First name" aria-label="First name" />
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" />
-                </div>
+          <div className='text-center mb-4'>
+          <h1>Welcome To Fishkart !</h1>
+          </div>
+          <div class="row g-3">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="First name" aria-label="First name" />
             </div>
-            <form class="row g-3">
-  <div class="col-md-6">
-    <br />
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" />
+            </div>
+          </div>
+          <form class="row g-3">
+            <div class="col-md-6">
+            <br />
     {/* <label for="inputEmail4" class="form-label">Email</label> */}
     <input type="email" class="form-control" id="inputEmail4" placeholder='Your Email' />
   </div>
@@ -56,7 +60,12 @@ const SignUp = () => {
     {/* <label for="inputAddress2" class="form-label">Address 2</label> */}
     <input type="text" class="form-control" id="inputAddress2" placeholder="Address 2" />
   </div>
-  <div class="col-12">
+  <div class=" col-md-6">
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username" />
+  {/* <span class="input-group-text">@</span> */}
+  {/* <input type="text" class="form-control" placeholder="Server" aria-label="Server"> */}
+ </div>
+  <div class="col-6">
     {/* <label for="inputPassword4" class="form-label">Password</label> */}
     <input type="tel" class="form-control" id="inputMobile" placeholder='Your Contact Number' pattern="[0-9]{10}" maxLength={10} />
   </div>

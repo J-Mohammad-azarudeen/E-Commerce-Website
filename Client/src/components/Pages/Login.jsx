@@ -9,22 +9,23 @@ const Login = () => {
                 <h1>Welcome To Fishkart!</h1>
             </div>
             <br />
-            <div class=" col-md-12">
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" />
-            </div>
+            <form action="">
+            
             <div class="col-md-12">
             <br />
-                <input type="email" class="form-control" id="inputEmail4" placeholder='Your Email' />
+                <input type="email" class="form-control" id="inputEmail4" placeholder='Your Email' required />
             </div>
             <div class="col-md-12">
                 <br />
-                <input type="password" class="form-control" id="inputPassword4" placeholder='Your Password' />
+                <input type="password" class="form-control" id="inputPassword4" placeholder='Your Password' required />
             </div>
             <div class="col-12 text-center">
                 <br />
                 <button type="submit" class="btn btn-primary">Log in</button>
+                
                 <p>You Don't have a Account? Click <Link to="/SignUp">Sign in..!</Link></p>
             </div>
+            </form>
         </div>
     )
 }

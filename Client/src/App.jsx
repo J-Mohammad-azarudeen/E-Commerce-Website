@@ -9,7 +9,7 @@ import Login from './components/Pages/Login'
 import SignUp from './components/Pages/SignUp'
 import Cart from './components/Pages/Cart'
 import WishList from './components/Pages/WishList'
-import Productcard from './components/Productcard/Productcard.jsx'
+import Productcard from './components/Productcard/ProductCard.jsx'
 import AboutUs from './components/Pages/AboutUs.jsx'
 import ContactUs from './components/Pages/ContactUs.jsx'
 
@@ -21,14 +21,14 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route exact path='/' Component={Home} />
-          <Route exact path='/products' Component={Products} />
-          <Route exact path='/aboutus' Component={AboutUs} />
-          <Route exact path='/contactus' Component={ContactUs} />
-          <Route exact path='/login' Component={Login} />
-          <Route exact path='/signup' Component={SignUp} />
-          <Route exact path='/cart' Component={Cart} />
-          <Route exact path='/wishlist' Component={WishList} />
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/wishlist" element={<WishList />} />
         </Routes>
       </BrowserRouter>
 

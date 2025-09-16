@@ -1,51 +1,66 @@
-import React,{useState, useRef} from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../Pages/firebase";
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
-    const formRef = useRef();
 
-    const [loading, setLoading] = useState(false);
+    const [userName, setUserName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
-    const handleSubmit = (e) =>{
+    const handleLogin = async (e) => {
         e.preventDefault();
-        setLoading(true);
         try {
-            setLoading(false);
-            alert("Logged in Successfully");
-            
+            await signInWithEmailAndPassword(auth, email, password);
+            alert("Login successful!");
+            navigate("/"); // redirect home
         } catch (error) {
-            console.log(error);
-            alert("Something went wrong");
+            alert(error.message);
         }
-        
-    }
+    };
+
+
     return (
-        
+
         <div className="text-center container mt-5 mb-5" style={{ maxWidth: '500px', margin: 'auto' }}>
             <div>
                 <h1>Welcome To Fishkart!</h1>
             </div>
             <br />
-            <form
-             action=""
-              onSubmit={handleSubmit}
-              ref={formRef}
-              >
-            
-            <div class="col-md-12">
-            <br />
-                <input type="email" name='email' class="form-control" id="inputEmail4" placeholder='Your Email' required />
-            </div>
-            <div class="col-md-12">
-                <br />
-                <input type="password" name='password' class="form-control" id="inputPassword4" placeholder='Your Password' required />
-            </div>
-            <div class="col-12 text-center">
-                <br />
-                <button type="submit" class="btn btn-primary">{loading ? "logging" : "Log in"}</button>
-                
-                <p>You Don't have a Account? Click <Link to="/SignUp">Sign in..!</Link></p>
-            </div>
+            <form onSubmit={handleLogin}>
+
+                <div className="col-md-12">
+                    <br />
+                    <input
+                        type="email"
+                        name='email'
+                        className="form-control"
+                        id="inputEmail4"
+                        placeholder='Your Email'
+                        onChange={(e) => setEmail(e.target.value)}
+                        required />
+                </div>
+                <div className="col-md-12">
+                    <br />
+                    <input
+                        type="password"
+                        name='password'
+                        className="form-control"
+                        id="inputPassword4"
+                        placeholder='Your Password'
+                        onChange={(e) => setPassword(e.target.value)}
+                        required />
+                </div>
+                <div className="col-md-12">
+                    <br />
+                    <button type="submit" className="btn btn-primary">Log In</button>
+
+                    <p>You Don't have a Account? Click <Link to="/SignUp">Sign Up..!</Link></p>
+                </div>
             </form>
         </div>
     )

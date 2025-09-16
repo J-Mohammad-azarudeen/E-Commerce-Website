@@ -31,35 +31,25 @@ const Login = () => {
                 <h1>Welcome To Fishkart!</h1>
             </div>
             <br />
-            <form onSubmit={handleLogin}>
+            <form
+                action=""
+                onSubmit={handleSubmit}
+                ref={formRef}
+            >
 
-                <div className="col-md-12">
+                <div class="col-md-12">
                     <br />
-                    <input
-                        type="email"
-                        name='email'
-                        className="form-control"
-                        id="inputEmail4"
-                        placeholder='Your Email'
-                        onChange={(e) => setEmail(e.target.value)}
-                        required />
+                    <input type="email" name='email' class="form-control" id="inputEmail4" placeholder='Your Email' required />
                 </div>
-                <div className="col-md-12">
+                <div class="col-md-12">
                     <br />
-                    <input
-                        type="password"
-                        name='password'
-                        class="form-control"
-                        id="inputPassword4"
-                        placeholder='Your Password'
-                        onChange={(e) => setPassword(e.target.value)}
-                        required />
+                    <input type="password" name='password' class="form-control" id="inputPassword4" placeholder='Your Password' required />
                 </div>
-                <div className="col-md-12">
+                <div class="col-12 text-center">
                     <br />
-                    <button type="submit" class="btn btn-primary">Log In</button>
+                    <button type="submit" class="btn btn-primary">{loading ? "logging" : "Log in"}</button>
 
-                    <p>You Don't have a Account? Click <Link to="/SignUp">Sign Up..!</Link></p>
+                    <p>You Don't have a Account? Click <Link to="/SignUp">Sign in..!</Link></p>
                 </div>
             </form>
         </div>

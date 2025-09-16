@@ -2,7 +2,7 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './ProductCard.css';
-import cards from '../../card.js';
+import cards from './card.js';
 
 
 export default function ProductCard() {

@@ -49,7 +49,7 @@ const Login = () => {
                     <input
                         type="password"
                         name='password'
-                        className="form-control"
+                        class="form-control"
                         id="inputPassword4"
                         placeholder='Your Password'
                         onChange={(e) => setPassword(e.target.value)}
@@ -57,7 +57,7 @@ const Login = () => {
                 </div>
                 <div className="col-md-12">
                     <br />
-                    <button type="submit" className="btn btn-primary">Log In</button>
+                    <button type="submit" class="btn btn-primary">Log In</button>
 
                     <p>You Don't have a Account? Click <Link to="/SignUp">Sign Up..!</Link></p>
                 </div>

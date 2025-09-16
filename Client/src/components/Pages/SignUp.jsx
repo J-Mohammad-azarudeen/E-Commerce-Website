@@ -215,7 +215,7 @@ const SignUp = () => {
 
           </div>
           <div className="col-md-2">
-            {/* <label for="inputZip" class="form-label">Zip</label> */}
+            {/* <label for="inputZip" crossorigin="form-label">Zip</label> */}
             <input type="text"
               className="form-control"
               id="inputZip"

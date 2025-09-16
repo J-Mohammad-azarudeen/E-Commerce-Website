@@ -31,25 +31,35 @@ const Login = () => {
                 <h1>Welcome To Fishkart!</h1>
             </div>
             <br />
-            <form
-                action=""
-                onSubmit={handleSubmit}
-                ref={formRef}
-            >
+            <form onSubmit={handleLogin}>
 
-                <div class="col-md-12">
+                <div className="col-md-12">
                     <br />
-                    <input type="email" name='email' class="form-control" id="inputEmail4" placeholder='Your Email' required />
+                    <input
+                        type="email"
+                        name='email'
+                        className="form-control"
+                        id="inputEmail4"
+                        placeholder='Your Email'
+                        onChange={(e) => setEmail(e.target.value)}
+                        required />
                 </div>
-                <div class="col-md-12">
+                <div className="col-md-12">
                     <br />
-                    <input type="password" name='password' class="form-control" id="inputPassword4" placeholder='Your Password' required />
+                    <input
+                        type="password"
+                        name='password'
+                        className="form-control"
+                        id="inputPassword4"
+                        placeholder='Your Password'
+                        onChange={(e) => setPassword(e.target.value)}
+                        required />
                 </div>
-                <div class="col-12 text-center">
+                <div className="col-md-12">
                     <br />
-                    <button type="submit" class="btn btn-primary">{loading ? "logging" : "Log in"}</button>
+                    <button type="submit" className="btn btn-primary">Log In</button>
 
-                    <p>You Don't have a Account? Click <Link to="/SignUp">Sign in..!</Link></p>
+                    <p>You Don't have a Account? Click <Link to="/SignUp">Sign Up..!</Link></p>
                 </div>
             </form>
         </div>

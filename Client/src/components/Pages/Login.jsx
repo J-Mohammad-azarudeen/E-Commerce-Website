@@ -1,7 +1,8 @@
-import React,{useState} from 'react'
+import React,{useState, useRef} from 'react'
 import { Link } from 'react-router-dom'
 
 const Login = () => {
+    const formRef = useRef();
 
     const [loading, setLoading] = useState(false);
 
@@ -25,7 +26,11 @@ const Login = () => {
                 <h1>Welcome To Fishkart!</h1>
             </div>
             <br />
-            <form action="" onSubmit={handleSubmit}>
+            <form
+             action=""
+              onSubmit={handleSubmit}
+              ref={formRef}
+              >
             
             <div class="col-md-12">
             <br />

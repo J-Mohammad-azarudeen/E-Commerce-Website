@@ -25,7 +25,8 @@ const Navbar = () => {
         navigate("/");
         window.location.href = "/";
     };
-
+    
+//user can delete account
     const handleDeleteAccount = async () => {
         if (auth.currentUser) {
             await deleteUser(auth.currentUser);
@@ -82,7 +83,7 @@ const Navbar = () => {
                     {/*  Search Form  */}
                     <form className="d-flex" role="search">
                         <div className="input-group">
-                            <input type="search" className="form-control w-[300px] " placeholder="Search" aria-label="Search" style={{ width: "200px" }} />
+                            <input type="search" className="form-control w-[300px] " placeholder="Search" aria-label="Search" style={{ width: "600px" }} />
                             <button className="btn btn-outline-primary h-90" type="submit">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="18" fill="currentColor"
                                     className="bi bi-search" viewBox="0 0 16 16">

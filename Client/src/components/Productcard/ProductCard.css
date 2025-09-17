@@ -10,6 +10,6 @@
   font-style: normal;
 }
 .hover:hover .card-img-top{
-  transform: scale(1.9) translateY(-15px);
+  transform: scale(1.5) translateY(-15px);
   transition: transform 0.3s;
 }

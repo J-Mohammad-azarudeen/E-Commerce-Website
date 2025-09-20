@@ -1,9 +1,14 @@
 import React from 'react'
 import Productcard from '../Productcard/ProductCard'
+import ContactUs from './ContactUs'
 
 const Products = () => {
     return (
-        <div><Productcard /></div>
+        <div>
+            <Productcard />
+            <ContactUs />
+        </div>
+
     )
 }
 

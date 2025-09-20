@@ -41,7 +41,7 @@ Our mission is simple: to provide high-quality, sustainably sourced seafood that
                 <div class="row align-items-start">
                     <div class="col">
                          <h3 className='fs-2'>At Fishkart, seafood isn’t just our business — it’s our tradition.
-For generations, our families have worked alongside local fishermen, bringing the freshest catch from the sea straight to your plate.</h3>
+                            For generations, our families have worked alongside local fishermen, bringing the freshest catch from the sea straight to your plate.</h3>
                     </div>
                     <div class="col">
                         <img src={aboutusimage3} className='w-100 h-70 rounded-4 ' alt="jpg" />
@@ -69,7 +69,7 @@ For generations, our families have worked alongside local fishermen, bringing th
                 <h4 className='fs-3 text-center'>Whether you’re a home cook preparing dinner or a restaurant looking for reliable supply, we’re here to serve you with care.</h4>
             </div>
             <br />
-            <h3 className='text-center fst-italic fw-bold'>Thank you for choosing Fishkart. <a href="Home.jsx">We look forward to serving you!</a> </h3> 
+            <h3 className='text-center fst-italic fw-bold'>Thank you for choosing Fishkart. <a href="#">We look forward to serving you!</a> </h3> 
             <br />
             <div>
                 <ContactUs />
